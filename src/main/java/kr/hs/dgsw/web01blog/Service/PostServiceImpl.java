@@ -19,6 +19,13 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    public Post Select(Long userId){
+        return this.pr
+                .findTopByUserNameOrderByIdDesc(userId)
+                .orElse(null);
+    }
+
+    @Override
     public boolean Add(Post comment) {
         try {
             this.pr.save(comment);
@@ -42,14 +49,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public boolean Delete(Post comment) {
-        List<Post> commentList = this.pr.findAll();
-        for(Post temp : commentList) {
-            if(temp.getTitle().equals(comment.getTitle()) && temp.getUserName().equals(comment.getUserName()) && temp.getContent().equals(comment.getContent())) {
-                this.pr.delete(temp);
-                return true;
-            }
-        }
+    public boolean Delete(Long id) {
+        this.pr.deleteById(id);
         return false;
     }
 }

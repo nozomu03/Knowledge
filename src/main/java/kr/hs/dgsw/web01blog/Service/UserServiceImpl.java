@@ -44,9 +44,9 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean Delete(String account) {
-        if(this.ur.findByAccount(account)!=null){
-            this.ur.delete(this.ur.findByAccount(account));
+    public boolean Delete(Long id) {
+        if(this.ur.findById(id)!=null){
+            this.ur.delete(this.ur.findById(id).get());
             return true;
         }
         else

@@ -8,5 +8,5 @@ public interface UserService {
     List<User> Get();
     boolean Add(User u);
     boolean Modify(Long id, User u);
-    boolean Delete(String account);
+    boolean Delete(Long id);
 }

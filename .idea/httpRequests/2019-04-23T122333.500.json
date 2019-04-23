@@ -1,0 +1,7 @@
+{
+  "timestamp": "2019-04-23T03:23:33.649+0000",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "d != java.lang.String",
+  "path": "/user"
+}
