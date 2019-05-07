@@ -1,3 +1,266 @@
+DELETE http://localhost:6974/post/40
+Content-Type: application/json
+
+<> 2019-05-03T072829.200.json
+
+###
+
+DELETE http://localhost:6974/post/40
+Content-Type: application/json
+
+<> 2019-05-03T072826.200.json
+
+###
+
+DELETE http://localhost:6974/post/40
+Content-Type: application/json
+
+<> 2019-05-03T072823.200.json
+
+###
+
+DELETE http://localhost:6974/post/40
+Content-Type: application/json
+
+<> 2019-05-03T072722.500.json
+
+###
+
+DELETE http://localhost:6974/post/40
+Content-Type: application/json
+
+<> 2019-05-03T072607.500.json
+
+###
+
+DELETE http://localhost:6974/post/40
+Content-Type: application/json
+
+<> 2019-05-03T072446.500.json
+
+###
+
+DELETE http://localhost:8080/post/40
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/post/40
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/post/40
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:8080/post/40
+Content-Type: application/json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T102421.200.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T102413.200.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T102220.500.json
+
+###
+
+PUT http://localhost:6974/post/40
+Content-Type: application/json
+
+{
+  "userName" : "nozomu03",
+  "title": "HELLOW WORLD MODIFY",
+  "content" : "ddddd"
+}
+
+<> 2019-05-02T102117.200.json
+
+###
+
+PUT http://localhost:8080/6974/40
+Content-Type: application/json
+
+{
+  "userName" : "nozomu03",
+  "title": "HELLOW WORLD MODIFY",
+  "content" : "ddddd"
+}
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T102008.500.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T101953.500.json
+
+###
+
+GET http://localhost:6974/post
+Accept: application/json
+
+<> 2019-05-02T101941.200.json
+
+###
+
+GET http://localhost:6974/user/40
+Accept: application/json
+
+###
+
+GET http://localhost:6974/user/2
+Accept: application/json
+
+###
+
+GET http://localhost:6974/user/1
+Accept: application/json
+
+###
+
+GET http://localhost:6974/user
+Accept: application/json
+
+<> 2019-05-02T101918.200.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T101631.500.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T101618.500.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T101339.500.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T101140.500.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T101139.500.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T101106.500.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T100923.500.json
+
+###
+
+GET http://localhost:6974/post/40
+Accept: application/json
+
+<> 2019-05-02T100906.500.json
+
+###
+
+GET http://localhost:8080/post/40
+Accept: application/json
+
+###
+
+GET http://localhost:8080/post/40
+Accept: application/json
+
+###
+
+GET http://localhost:8080/user
+Accept: application/json
+
+<> 2019-05-02T024237.200.json
+
+###
+
+GET http://localhost:8080/user/nozomu03
+Accept: application/json
+
+<> 2019-05-02T023427.200.json
+
+###
+
+GET http://localhost:8080/user/nozomu03
+Accept: application/json
+
+<> 2019-05-02T023424.200.json
+
+###
+
+GET http://localhost:8080/user/nozomu03
+Accept: application/json
+
+<> 2019-05-02T022354.200.json
+
+###
+
+GET http://localhost:8080/user/nozomu03
+Accept: application/json
+
+<> 2019-05-02T022350.200.json
+
+###
+
+GET http://localhost:8080/nozomu03
+Accept: application/json
+
+<> 2019-05-02T022339.404.json
+
+###
+
 DELETE http://localhost:8080/user
 Content-Type: application/json
 
@@ -108,375 +371,6 @@ Content-Type: application/json
 }
 
 <> 2019-04-23T122027.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T122024.200.json
-
-###
-
-DELETE http://localhost:8080/user
-Content-Type: application/json
-
-nozomu03
-
-<> 2019-04-23T122016.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T122005.200.json
-
-###
-
-DELETE http://localhost:8080/user
-Content-Type: application/json
-
-nozomu03
-
-<> 2019-04-23T121844.500.json
-
-###
-
-PUT http://localhost:8080/user/1
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03",
-    "email" : "nozomu03@naver.com",
-    "phone" : "gjiowjergi;owj;io"
-}
-
-<> 2019-04-23T121841.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121838.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03"
-}
-
-<> 2019-04-23T121836.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121832.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121827.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121737.500.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121731.500.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121524.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121341.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121338.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T121005.200.json
-
-###
-
-DELETE http://localhost:8080/user
-Content-Type: application/json
-
-nozomu03
-
-<> 2019-04-23T121000.200.json
-
-###
-
-DELETE http://localhost:8080/user
-Content-Type: application/json
-
-nozomu03
-
-<> 2019-04-23T120958.500.json
-
-###
-
-PUT http://localhost:8080/user/1
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03",
-    "email" : "nozomu03@naver.com",
-    "phone" : "gjiowjergi;owj;io"
-}
-
-<> 2019-04-23T120953.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03"
-}
-
-<> 2019-04-23T120950.200.json
-
-###
-
-DELETE http://localhost:8080/user
-Content-Type: application/json
-
-nozomu03
-
-<> 2019-04-23T120849.500.json
-
-###
-
-PUT http://localhost:8080/user/1
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03",
-    "email" : "nozomu03@naver.com",
-    "phone" : "gjiowjergi;owj;io"
-}
-
-<> 2019-04-23T120845.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03"
-}
-
-<> 2019-04-23T120842.200.json
-
-###
-
-PUT http://localhost:8080/user/1
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03",
-    "email" : "nozomu03@naver.com",
-    "phone" : "gjiowjergi;owj;io"
-}
-
-<> 2019-04-23T120833.200.json
-
-###
-
-PUT http://localhost:8080/user/1
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03",
-    "email" : "nozomu03@naver.com",
-    "phone" : "gjiowjergi;owj;io"
-}
-
-<> 2019-04-23T120830.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03"
-}
-
-<> 2019-04-23T120827.200.json
-
-###
-
-DELETE http://localhost:8080/user
-Content-Type: application/json
-
-nozomu03
-
-<> 2019-04-23T120822.200.json
-
-###
-
-DELETE http://localhost:8080/user
-Content-Type: application/json
-
-nozomu03
-
-<> 2019-04-23T120816.500.json
-
-###
-
-PUT http://localhost:8080/user/1
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03",
-    "email" : "nozomu03@naver.com",
-    "phone" : "gjiowjergi;owj;io"
-}
-
-<> 2019-04-23T120812.200.json
-
-###
-
-POST http://localhost:8080/user
-Content-Type: application/json
-
-{
-    "account" : "nozomu03",
-    "password" : "1234",
-    "name" : "nozomu03"
-}
-
-<> 2019-04-23T120802.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T120753.200.json
-
-###
-
-GET http://localhost:8080/user
-Accept: application/json
-
-<> 2019-04-23T120747.200.json
-
-###
-
-GET http://localhost:8080/attachment
-Accept: application/json
-
-###
-
-GET http://localhost:8080/attachment
-Accept: application/json
-
-<> 2019-04-23T104123.200.json
-
-###
-
-DELETE http://localhost:8080/attachment
-Content-Type: application/json
-
-1
-
-<> 2019-04-23T104121.200.json
-
-###
-
-GET http://localhost:8080/attachment
-Accept: application/json
-
-<> 2019-04-23T104115.200.json
-
-###
-
-DELETE http://localhost:8080/attachment
-Content-Type: application/json
-
-5
-
-<> 2019-04-23T104111.200.json
-
-###
-
-DELETE http://localhost:8080/attachment/1
-Content-Type: application/json
-
-5
-
-<> 2019-04-23T104040.405.json
-
-###
-
-DELETE http://localhost:8080/attachment/1
-Content-Type: application/json
-
-5
-
-<> 2019-04-23T104026.405.json
 
 ###
 

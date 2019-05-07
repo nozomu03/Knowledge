@@ -7,6 +7,7 @@ public enum ResponseType {
     USER_ADD(102, "User [%d] Added"),
     USER_UPDATE(103, "User [%d] Updated"),
     USER_LIST(104, "User Count : [%d]."),
+    USER_GET(105, "User Get"),
 
     POST_GET(201, "Post Geted"),
     POST_ADD(202, "Post [%d] Added"),

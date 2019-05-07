@@ -9,5 +9,5 @@ import org.springframework.data.repository.query.Param;
 import java.util.Optional;
 
 public interface PostRepository extends JpaRepository<Post, Long> {
-    Optional<Post> findTopByUserNameOrderByIdDesc(Long userId);
+    Optional<Post> findByUserName(String userName);
 }

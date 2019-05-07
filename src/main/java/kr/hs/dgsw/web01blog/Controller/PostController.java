@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import javax.xml.ws.Response;
+import java.util.Collections;
 import java.util.List;
 
 @RestController
@@ -18,37 +19,41 @@ public class PostController {
     private PostService ps;
 
     @GetMapping("/post")
-    public ResponseFormat Select(@RequestBody Long id){
-        if(this.ps.Select(id) != null)
-            return new ResponseFormat(ResponseType.POST_GET, "GET", "SUCCESS");
-        else
-            return new ResponseFormat(ResponseType.FAIL, "Can't Get");
+    public List<Post> Get(){
+        List<Post> temp = this.ps.Get();
+        Collections.reverse(temp);
+        return temp;
+    }
+
+    @GetMapping("/post/{id}")
+    public Post Select(@PathVariable Long id){
+        return this.ps.Select(id);
     }
 
     @PostMapping("/post")
-    public ResponseFormat Add(@RequestBody Post comment){
+    public boolean Add(@RequestBody Post comment){
         boolean how = this.ps.Add(comment);
         if(how)
-            return new ResponseFormat(ResponseType.POST_ADD, "ADD", comment.getId());
+            return true;
         else
-            return new ResponseFormat(ResponseType.FAIL, "Can't Add");
+            return false;
     }
 
     @PutMapping("/post/{id}")
-    public ResponseFormat Modify(@PathVariable Long id, @RequestBody Post post){
+    public boolean Modify(@PathVariable Long id, @RequestBody Post post){
         boolean how = this.ps.Modify(id, post.getContent(), post.getTitle());
         if(how)
-            return new ResponseFormat(ResponseType.POST_UPDATE, "UPDATE", post.getId());
+            return true;
         else
-            return new ResponseFormat(ResponseType.FAIL, "Can't Update");
+            return false;
     }
 
-    @DeleteMapping("/post")
-    public ResponseFormat Delete(@RequestBody Long id){
+    @DeleteMapping("/post/{id}")
+    public boolean Delete(@PathVariable Long id){
         boolean how = this.ps.Delete(id);
         if(how)
-            return new ResponseFormat(ResponseType.POST_DELETE, "DELETE", id);
+            return true;
         else
-            return new ResponseFormat(ResponseType.FAIL, "Can't DELETE");
+            return false;
     }
 }

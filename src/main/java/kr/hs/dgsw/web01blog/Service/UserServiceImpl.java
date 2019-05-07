@@ -5,6 +5,7 @@ import kr.hs.dgsw.web01blog.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,6 +17,21 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> Get() {
         return this.ur.findAll();
+    }
+
+    @PostConstruct
+    private void Init(){
+        User temp = new User("nozomu03", "qewr", "wejtwet");
+        this.Add(temp);
+    }
+
+    @Override
+    public User GetOne(String account) {
+        Optional<User> found = this.ur.findByAccount(account);
+        if(found.isPresent())
+            return found.get();
+        else
+            return null;
     }
 
     @Override

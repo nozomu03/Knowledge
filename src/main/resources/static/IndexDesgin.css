@@ -1,0 +1,58 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+div.content {
+    height: 1500px;
+    background-color: deepskyblue;
+    background-image: linear-gradient(blue, red);
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: mediumaquamarine;
+    height: 120px;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 210vh;
+
+}
+
+aside {
+    margin-top: 120px;
+    bottom: 100px;
+    height: 826px
+
+}
+
+aside.left-container {
+    background-color: cyan;
+    width: 200px;
+}
+
+aside.right-container {
+    background-color: maroon;
+    width: 200px;
+    left: 175.8vh
+}
+
+#section {
+    left: 200px;
+    right: 200px;
+    top: 120px;
+    bottom: 100px;
+    overflow-y:hidden
+}
+
+footer {
+    background-color: orange;
+    height: 100px;
+    top: calc(100vh - 100px) !important;
+}

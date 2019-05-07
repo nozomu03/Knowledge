@@ -22,17 +22,11 @@ public class Post {
     @Column(nullable = false)
     private String userName;
 
-    @Column
-    private Long userId;
-
     @Column(nullable = false)
     private String title;
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String content;
-
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
-    private List<Attachment> pictures;
 
 
     @CreationTimestamp

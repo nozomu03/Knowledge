@@ -1,11 +1,7 @@
 package kr.hs.dgsw.web01blog.Controller;
 
-import kr.hs.dgsw.web01blog.Protocol.ResponseFormat;
-import kr.hs.dgsw.web01blog.Protocol.ResponseType;
 import kr.hs.dgsw.web01blog.Service.UserService;
-import kr.hs.dgsw.web01blog.Service.UserServiceImpl;
 import kr.hs.dgsw.web01blog.domain.User;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,42 +12,41 @@ public class UserController {
     @Autowired
     private UserService us;
 
-    @GetMapping("/test")
-    public String Test(){
-        return "Hello";
+    @GetMapping("/user")
+    public List<User> Get(){
+        return this.us.Get();
     }
 
-    @GetMapping("/user")
-    public ResponseFormat Get(){
-        List<User> temp = this.us.Get();
-        return new ResponseFormat(ResponseType.USER_LIST, "LIST",  Integer.parseInt(""+temp.size()));
+    @GetMapping("/user/{account}")
+    public User GetOne(@PathVariable String account){
+        return this.us.GetOne(account);
     }
 
     @PostMapping("/user")
-    public ResponseFormat Add(@RequestBody User u){
+    public boolean Add(@RequestBody User u){
         boolean how = this.us.Add(u);
         if(how)
-            return new ResponseFormat(ResponseType.USER_ADD, "Added", u.getId());
+            return true;
         else
-            return new ResponseFormat(ResponseType.FAIL, "Can't add");
+            return false;
     }
 
     @PutMapping("/user/{id}")
-    public ResponseFormat Modify(@PathVariable Long id, @RequestBody User u){
+    public boolean Modify(@PathVariable Long id, @RequestBody User u){
         boolean how =  this.us.Modify(id, u);
         if(how)
-            return new ResponseFormat(ResponseType.USER_UPDATE, "Updated", u.getId());
+            return true;
         else
-            return new ResponseFormat(ResponseType.FAIL, "Can't update");
+            return false;
     }
 
     @DeleteMapping("/user")
-    public ResponseFormat Delete(@RequestBody Long id){
+    public boolean Delete(@RequestBody Long id){
         boolean how = this.us.Delete(id);
         if(how)
-            return new ResponseFormat(ResponseType.USER_UPDATE, "delete", id);
+            return true;
         else
-            return new ResponseFormat(ResponseType.FAIL, "Can't delete");
+            return false;
 
     }
 }
