@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>SingUp</title>
+</head>
+<body>
+    <h3>회원가입</h3>
+    <br>
+    <div id="layer1" class="pop-layer">
+        <input id="signid" placeholder="id">
+        <input id="signpw" placeholder="pw">
+        <input id="name" placeholder="nickname">
+        <button onclick="Signin()">확인</button>
+    </div>
+</body>
+
+<script>
+    function Signin() {
+        let data = new Object();
+        data.account = $("#signid").val();
+        data.password = $("#signpw").val();
+        data.name = $("#name").val();
+        data = JSON.stringify(data);
+
+        $.ajax({
+            url: "/user",
+            type: "POST",
+            data: data,
+            contentType: "application/json",
+            success: function (response) {
+                self.close();
+            }
+        });
+    }
+</script>
+</html>
+

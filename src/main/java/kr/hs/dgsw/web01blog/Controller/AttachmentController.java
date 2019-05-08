@@ -9,21 +9,36 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.io.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 public class AttachmentController {
     @Autowired
     private AttachmentService as;
+    private List<String> destFileName;
+    List<Attachment> attachments;
 
-
-    @PostMapping("/attachment")
-    private ResponseFormat Upload(@RequestBody Attachment comment){
-        File destFile = new File(comment.getFilePath());
-        Attachment temp =this.as.upload(comment.getId(), (MultipartFile) destFile);
-        if(temp!=null)
-            return new ResponseFormat(ResponseType.ATTACHMENT_STORED, "Stored");
-        else
-            return new ResponseFormat(ResponseType.FAIL, "Fail to store");
+    @PostMapping("/attachment/{postId}")
+    private List<Attachment> Upload(@RequestParam List<MultipartFile> srcFile, @PathVariable Long postId){
+        destFileName = new ArrayList<String>();
+        attachments = new ArrayList<Attachment>();
+        int count = 0;
+        try {
+            for (MultipartFile temp : srcFile) {
+                destFileName.add("D://site/upload/" + LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")) + UUID.randomUUID().toString() + "_" + temp.getOriginalFilename());
+                File destFile = new File(destFileName.get(count));
+                destFile.getParentFile().mkdirs();
+                temp.transferTo(destFile);
+                attachments.add(new Attachment(destFileName.get(count), postId));
+            }
+            return attachments;
+        }catch (Exception e){
+            System.out.print(e.getMessage());
+            return null;
+        }
     }
 }

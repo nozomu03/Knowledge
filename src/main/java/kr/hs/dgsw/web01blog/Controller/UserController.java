@@ -17,9 +17,9 @@ public class UserController {
         return this.us.Get();
     }
 
-    @GetMapping("/user/{account}")
-    public User GetOne(@PathVariable String account){
-        return this.us.GetOne(account);
+    @PostMapping("/login")
+    public User GetOne(@RequestBody User u){
+        return this.us.GetOne(u);
     }
 
     @PostMapping("/user")

@@ -43,7 +43,6 @@ public class AttachmentServiceimpl implements AttachmentService{
 
     @Override
     public void Download(List<Attachment> picture, HttpServletRequest request, HttpServletResponse response) {
-        String filePath, fileName = null;
 
     }
 }

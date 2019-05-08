@@ -31,12 +31,12 @@ public class PostController {
     }
 
     @PostMapping("/post")
-    public boolean Add(@RequestBody Post comment){
+    public Long Add(@RequestBody Post comment){
         boolean how = this.ps.Add(comment);
         if(how)
-            return true;
+            return comment.getId();
         else
-            return false;
+            return comment.getId();
     }
 
     @PutMapping("/post/{id}")

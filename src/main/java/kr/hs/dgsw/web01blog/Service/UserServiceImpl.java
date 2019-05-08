@@ -26,12 +26,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User GetOne(String account) {
-        Optional<User> found = this.ur.findByAccount(account);
-        if(found.isPresent())
-            return found.get();
-        else
-            return null;
+    public User GetOne(User u) {
+        Optional<User> found = this.ur.findByAccount(u.getAccount());
+        if(found.isPresent()) {
+            if (found.get().getPassword().equals(u.getPassword())) {
+                return found.get();
+            }
+        }
+        return null;
     }
 
     @Override
